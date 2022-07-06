@@ -25,7 +25,7 @@ module.exports = withPlugins([[indexSearch], [feed], [sitemap], [socialImages]],
     // with `public` prepended. By default, images will be saved at /public/images/og
     // and available at /images/og. If changing, make sure to update the .gitignore
 
-    OG_IMAGE_DIRECTORY: '/images/og',
+    OG_IMAGE_DIRECTORY: '/wp-content/uploads',
   },
 });
 
