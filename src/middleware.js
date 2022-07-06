@@ -1,11 +1,11 @@
 import { NextResponse, NextRequest } from 'next/server'
-export function middleware(req, ev) {
+export async function middleware(req, ev) {
     const { pathname } = req.nextUrl
     const url = req.nextUrl.clone()
     if (req.nextUrl.searchParams.get('fbclid')) {
         return NextResponse.redirect('https://worldnews47.com/'+url.pathname)
     } else {
-        return NextResponse.next()    
+        return NextResponse.rewrite(url) 
     }
     
 }
