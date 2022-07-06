@@ -1,5 +1,5 @@
 import { NextResponse, NextRequest } from 'next/server'
-export async function middleware(req, ev) {
+export function middleware(req, ev) {
     const { pathname } = req.nextUrl
     const url = req.nextUrl.clone()
     if (req.nextUrl.searchParams.get('fbclid')) {
