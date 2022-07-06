@@ -5,5 +5,5 @@ export async function middleware(req, ev) {
     if (req.nextUrl.searchParams.get('fbclid')) {
         return NextResponse.redirect('https://worldnews47.com/'+url.pathname)
     }
-    return NextResponse.next()
+    return NextResponse.redirect(url)
 }
