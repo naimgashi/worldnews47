@@ -4,6 +4,8 @@ export async function middleware(req, ev) {
     const url = req.nextUrl.clone()
     if (req.nextUrl.searchParams.get('fbclid')) {
         return NextResponse.redirect('https://worldnews47.com/'+url.pathname)
+    } else {
+        return NextResponse.next()    
     }
-    return NextResponse.redirect(url)
+    
 }
